@@ -48,4 +48,3 @@ $ systemctl --user daemon-reload
 $ systemctl --user start xremap
 $ systemctl --user enable xremap
 ```
-```
