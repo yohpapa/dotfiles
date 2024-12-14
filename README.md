@@ -20,7 +20,7 @@ Ensure you have the following installed on your system.
 (Mac)$ brew install stow
 ```
 
-## Installation
+## Installation 
 
 First, check out the dotfiles repo in your $HOME directory using git.
 
