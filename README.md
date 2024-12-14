@@ -9,15 +9,15 @@ Ensure you have the following installed on your system.
 ### Git
 
 ```
-apt install git
-brew install git
+(Ubuntu)$ sudo apt install git
+(Mac)$ brew install git
 ```
 
 ### Stow
 
 ```
-apt install stow
-brew install stow
+(Ubuntu)$ sudo apt install stow
+(Mac)$ brew install stow
 ```
 
 ## Installation
@@ -25,12 +25,12 @@ brew install stow
 First, check out the dotfiles repo in your $HOME directory using git.
 
 ```
-git clone https://github.com/yohpapa/dotfiles.git
-cd dotfiles
+$ git clone https://github.com/yohpapa/dotfiles.git
+$ cd dotfiles
 ```
 
 then use GNU stow to creat symlinks.
 
 ```
-stow .
+$ stow .
 ```
