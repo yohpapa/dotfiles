@@ -34,3 +34,18 @@ then use GNU stow to creat symlinks.
 ```
 $ stow .
 ```
+
+Copy the udev rule in the repository to /etc/udev/rule.d.
+
+```
+$ cp .config/systemd/user/80-xremap.rules /etc/udev/rule.d/
+```
+
+then start a new system service with the following.
+
+```
+$ systemctl --user daemon-reload
+$ systemctl --user start xremap
+$ systemctl --user enable xremap
+```
+```
