@@ -18,7 +18,7 @@ brew install git
 ```
 apt install stow
 brew install stow
-``
+```
 
 ## Installation
 
