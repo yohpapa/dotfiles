@@ -27,14 +27,13 @@ setopt hist_find_no_dups
 # Completions should be configured before compinit, as stated in the zsh-completions manual
 # installation guide. -- https://github.com/Aloxaf/fzf-tab
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*:git-checkout:*' sort false
-zstyle ':completion:*:descriptions' format '[%d]'
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
-zstyle ':fzf-tab:*' fzf-flags --color=fg:1,fg+:2 --bind=tab:accept
-zstyle ':fzf-tab:*' use-fzf-default-opts yes
-zstyle ':fzf-tab:*' switch-group '<' '>'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --icons=always --all $realpath'
+zstyle ':fzf-tab:complete:ls:*' fzf-preview 'eza --icons=always --all $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'll $realpath'
+zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
+zstyle ':fzf-tab:*' popup-min-size 100 20
 
 # Auto-completion setup
 autoload -Uz compinit && compinit
