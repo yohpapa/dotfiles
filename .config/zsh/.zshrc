@@ -31,7 +31,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza --icons=always --all $realpath'
 zstyle ':fzf-tab:complete:ls:*' fzf-preview 'eza --icons=always --all $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'll $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --icons=always -all $realpath'
 zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 zstyle ':fzf-tab:*' popup-min-size 100 20
 
@@ -41,10 +41,10 @@ _comp_options+=(globdots)  # Include hidden files
 zinit cdreplay -q
 
 # Aliases
-alias ls='exa --icons=always'
-alias ll='exa --icons=always --long'
-alias la='exa --icons=always --all'
-alias tree='exa -T'
+alias ls='eza --icons=always'
+alias ll='eza --icons=always --long'
+alias la='eza --icons=always --all'
+alias tree='eza -T'
 alias cat='bat'
 alias c='clear'
 # Not ready yet
@@ -60,17 +60,18 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 
-# Rust
-. "$HOME/.cargo/env"
-
 # Starship
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 
 # Shell integrations
+eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)" 
 eval "$(zoxide init --cmd cd zsh)"
 # Note: https://github.com/junegunn/fzf?tab=readme-ov-file#setting-up-shell-integration
-# eval "$(fzf --zsh)"
-source /usr/share/doc/fzf/examples/completion.zsh
-source /usr/share/doc/fzf/examples/key-bindings.zsh
+eval "$(fzf --zsh)"
+# source /usr/share/doc/fzf/examples/completion.zsh
+# source /usr/share/doc/fzf/examples/key-bindings.zsh
 
+# Other configurations
+[ -e $HOME/.cargo/env ] && source $HOME/.cargo/env
+[ -e $ZDOTDIR/company.zsh ] && source $ZDOTDIR/company.zsh 

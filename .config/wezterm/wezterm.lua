@@ -4,13 +4,16 @@ local config = wezterm.config_builder()		-- This will hold the configuration.
 -- This is where you actually apply your config choices
 config.color_scheme = 'Catppuccin Macchiato'
 
-config.font = wezterm.font('Hack Nerd Font')
--- config.font = wezterm.font('JetBrains Font')
--- config.font = wezterm.font('HeavyData Nerd Font')
-config.font_size = 12
+if wezterm.target_triple == 'aarch64-apple-darwin' then
+	config.font = wezterm.font('MesloLGS Nerd Font Mono')
+	config.font_size = 16
+	config.window_decorations = "RESIZE"
+else
+	config.font = wezterm.font('Hack Nerd Font')
+	config.font_size = 14
+	config.window_decorations = "NONE"
+end
 
--- config.window_decorations = "RESIZE"
-config.window_decorations = "NONE"
 config.window_background_opacity = 0.8
 config.window_background_gradient = {
   colors = {
