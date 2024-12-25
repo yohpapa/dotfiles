@@ -1,0 +1,1 @@
+require("kensukenakai.core")

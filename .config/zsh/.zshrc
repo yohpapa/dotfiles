@@ -64,14 +64,15 @@ zinit light zsh-users/zsh-autosuggestions
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 
 # Shell integrations
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)" 
 eval "$(zoxide init --cmd cd zsh)"
 # Note: https://github.com/junegunn/fzf?tab=readme-ov-file#setting-up-shell-integration
-eval "$(fzf --zsh)"
-# source /usr/share/doc/fzf/examples/completion.zsh
-# source /usr/share/doc/fzf/examples/key-bindings.zsh
+# eval "$(fzf --zsh)"
+source /usr/share/doc/fzf/examples/completion.zsh
+source /usr/share/doc/fzf/examples/key-bindings.zsh
 
 # Other configurations
 [ -e $HOME/.cargo/env ] && source $HOME/.cargo/env
 [ -e $ZDOTDIR/company.zsh ] && source $ZDOTDIR/company.zsh 
+[ -f $HOME/.ghcup/env ] && . $HOME/.ghcup/env # ghcup-env
