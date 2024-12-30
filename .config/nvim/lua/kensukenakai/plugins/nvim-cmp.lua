@@ -2,10 +2,7 @@ return {
     'hrsh7th/nvim-cmp',
     -- intentionally commented out the below to enable this even during th command mode
     -- event = "InsertEnter",
-    dependencies = {
-        -- 'neovim/nvim-lspconfig',
-        -- 'hrsh7th/cmp-nvim-lsp',
-        'hrsh7th/cmp-buffer',
+    dependencies = { 'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-cmdline',
         'L3MON4D3/LuaSnip',
@@ -13,7 +10,7 @@ return {
         "rafamadriz/friendly-snippets",
         "onsails/lspkind.nvim",
     },
-     config = function()
+    config = function()
         local cmp = require('cmp')
         local luasnip = require('luasnip')
         local lspkind = require('lspkind')
@@ -34,7 +31,7 @@ return {
                 { "│", hl_name },
             }
         end
-    
+
         vscode.lazy_load()
         cmp.setup({
             snippet = {
@@ -60,7 +57,7 @@ return {
                 ['<CR>'] = cmp.mapping.confirm({ select = true }),
             }),
             sources = cmp.config.sources({
-                -- { name = 'nvim_lsp' },
+                { name = 'nvim_lsp' },
                 { name = 'luasnip' },
                 { name = 'buffer' },
                 { name = 'path' },
@@ -75,12 +72,12 @@ return {
               })
             })
             require("cmp_git").setup() ]]--
-            formating = {
-                format = function(entry, vim_item)
-                    vim_item.abbr = ' ' .. vim_item.abbr
-                    vim_item.menu = (vim_item.menu or '') .. ' '
-                    return vim_item
-                end
+            formatting = {
+                expandable_indicator = true,
+                fields = { cmp.ItemField.Abbr, cmp.ItemField.Kind },
+                format = lspkind.cmp_format({
+                    ellipsis_char = '...',
+                }),
             },
             -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
             cmp.setup.cmdline({ '/', '?' }, {
@@ -99,13 +96,6 @@ return {
                 }),
                 matching = { disallow_symbol_nonprefix_matching = false }
             }),
-
-            -- set up lspconfig
-            -- local capabilities = require('cmp_nvim_lsp').default_capabilities()
-            -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-            -- require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
-                -- capabilities = capabilities
-            -- }
         })
     end
 }
