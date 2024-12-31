@@ -65,6 +65,7 @@ export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 
 # General environment
 export EDITOR="nvim"
+export PATH=$PATH:$HOME/go/bin
 
 # Shell integrations
 # eval "$(/opt/homebrew/bin/brew shellenv)"

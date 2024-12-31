@@ -16,13 +16,13 @@ return {
 		vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 		vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 
-		-- telescope.setup({
-		--     pickers = {
-		--         find_files = { theme = "ivy"},
-		--         live_grep = { theme = "ivy"},
-		--         buffers = { theme = "ivy" },
-		--         help_tags = { theme = "ivy" },
-		--     },
-		-- })
+		telescope.setup({
+			pickers = {
+				find_files = { hidden = true },
+				live_grep = { hidden = true },
+				buffers = { hidden = true },
+				help_tags = { hidden = true },
+			},
+		})
 	end,
 }
