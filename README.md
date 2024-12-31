@@ -1,23 +1,15 @@
 # Dotfiles
 
-This directory contains the dotfiles for Linux-based system.
+This directory contains the dotfiles for Debian-based system.
 
 ## Requirements
 
 Ensure you have the following installed on your system.
 
-### Git
-
 ```
-(Ubuntu)$ sudo apt install git
-(Mac)$ brew install git
-```
-
-### Stow
-
-```
-(Ubuntu)$ sudo apt install stow
-(Mac)$ brew install stow
+$ sudo add-apt-repository ppa:neovim-ppa/unstable
+$ sudo apt update
+$ sudo apt install neovim git stow fzf libgmp3-dev ripgrep npm
 ```
 
 ## Installation
@@ -35,6 +27,8 @@ then use GNU stow to creat symlinks.
 $ stow .
 ```
 
+## Post-installations
+
 Copy the udev rule in the repository to /etc/udev/rule.d.
 
 ```
@@ -48,3 +42,16 @@ $ systemctl --user daemon-reload
 $ systemctl --user start xremap
 $ systemctl --user enable xremap
 ```
+
+Clone the below projects.
+
+```
+$ cd $HOME/.config/tmux/plugins
+$ git clone https://github.com/tmux-plugins/tpm plugins/tpm
+$ cd /tmp
+$ git clone https://gitlab.com/phoneybadger/pokemon-colorscripts.git
+$ cd pokemon-colorscripts
+$ sudo ./install.sh
+```
+
+Don't forget to install tmux plugins with `Ctrl-U`+I.
