@@ -9,7 +9,7 @@ Ensure you have the following installed on your system.
 ```
 $ sudo add-apt-repository ppa:neovim-ppa/unstable
 $ sudo apt update
-$ sudo apt install neovim git stow fzf libgmp3-dev ripgrep npm
+$ sudo apt install neovim git stow fzf libgmp3-dev ripgrep npm ffmpeg 7zip jq fd-find xclip poppler-utils
 ```
 
 ## Installation
@@ -46,8 +46,10 @@ $ systemctl --user enable xremap
 Clone the below projects.
 
 ```
-$ cd $HOME/.config/tmux/plugins
-$ git clone https://github.com/tmux-plugins/tpm plugins/tpm
+$ mkdir -p $HOME/.config/tmux/plugins
+$ git clone https://github.com/tmux-plugins/tpm $HOME/.config/tmux/plugins/tpm
+$ mkdir -p $HOME/.config/yazi/flavors
+$ git clone https://github.com/BennyOe/tokyo-night.yazi.git @HOME/.config/yazi/flavors/tokyo-night.yazi
 $ cd /tmp
 $ git clone https://gitlab.com/phoneybadger/pokemon-colorscripts.git
 $ cd pokemon-colorscripts
