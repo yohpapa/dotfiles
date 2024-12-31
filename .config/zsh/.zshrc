@@ -79,6 +79,7 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 # Other configurations
 [ -e $HOME/.cargo/env ] && source $HOME/.cargo/env
 [ -e $ZDOTDIR/company.zsh ] && source $ZDOTDIR/company.zsh 
+[ -e $ZDOTDIR/home.zsh ] && source $ZDOTDIR/home.zsh 
 [ -f $HOME/.ghcup/env ] && . $HOME/.ghcup/env # ghcup-env
 
 # yazi configuration
