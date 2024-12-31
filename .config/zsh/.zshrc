@@ -47,8 +47,8 @@ alias la='eza --icons=always --all'
 alias tree='eza -T'
 alias cat='bat'
 alias c='clear'
+alias vi='nvim'
 # Not ready yet
-# alias vi='nvim'
 # alias top='btop'
 
 # Install plugins
@@ -63,6 +63,9 @@ zinit light zsh-users/zsh-autosuggestions
 # Starship
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 
+# General environment
+export EDITOR="nvim"
+
 # Shell integrations
 # eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)" 
@@ -76,3 +79,13 @@ source /usr/share/doc/fzf/examples/key-bindings.zsh
 [ -e $HOME/.cargo/env ] && source $HOME/.cargo/env
 [ -e $ZDOTDIR/company.zsh ] && source $ZDOTDIR/company.zsh 
 [ -f $HOME/.ghcup/env ] && . $HOME/.ghcup/env # ghcup-env
+
+# yazi configuration
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
