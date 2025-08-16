@@ -1,5 +1,5 @@
 return {
-	"williamboman/mason.nvim",
+  "williamboman/mason.nvim",
 	dependencies = {
 		"williamboman/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
@@ -11,12 +11,14 @@ return {
 		local mason_tool_installer = require("mason-tool-installer")
 
 		mason.setup()
+
 		mason_lsp.setup({
 			ensure_installed = {
 				"bashls", -- bash
 				"lua_ls", -- lua
 				"marksman", -- markdown
 				"taplo", -- toml
+				"hls", -- haskell
 			},
 		})
 
@@ -24,6 +26,7 @@ return {
 			ensure_installed = {
 				"prettier",
 				"stylua",
+				"fourmolu",
 			},
 		})
 	end,

@@ -53,9 +53,13 @@ return {
 
 				opts.desc = "Restart LSP"
 				keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)
+
+				opts.desc = "Open diagnostic"
+				keymap.set("n", "<leader>ge", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 			end,
 		})
 
+    --[[
 		mason_lsp.setup_handlers({
 			function(server_name)
 				lspconfig[server_name].setup({
@@ -75,5 +79,6 @@ return {
 				})
 			end,
 		})
+    --]]
 	end,
 }

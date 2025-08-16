@@ -5,7 +5,7 @@ local keymap = vim.keymap
 
 -- general
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
-keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+keymap.set("n", "<leader>no", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- window management
 keymap.set("n", "<leader>s|", "<C-w>v", { desc = "Split window vertically" })
