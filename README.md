@@ -26,7 +26,6 @@ then use GNU stow to creat symlinks.
 
 ```
 $ stow .
-
 ```
 
 ## Post-installations
