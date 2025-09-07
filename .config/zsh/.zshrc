@@ -71,10 +71,7 @@ export PATH=$PATH:$HOME/go/bin
 # eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(starship init zsh)" 
 eval "$(zoxide init --cmd cd zsh)"
-# Note: https://github.com/junegunn/fzf?tab=readme-ov-file#setting-up-shell-integration
-# eval "$(fzf --zsh)"
-source /usr/share/doc/fzf/examples/completion.zsh
-source /usr/share/doc/fzf/examples/key-bindings.zsh
+eval "$(fzf --zsh)"
 
 # Other configurations
 [ -e $HOME/.cargo/env ] && source $HOME/.cargo/env

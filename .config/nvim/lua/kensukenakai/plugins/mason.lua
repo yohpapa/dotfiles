@@ -1,5 +1,5 @@
 return {
-  "williamboman/mason.nvim",
+	"williamboman/mason.nvim",
 	dependencies = {
 		"williamboman/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
@@ -18,7 +18,7 @@ return {
 				"lua_ls", -- lua
 				"marksman", -- markdown
 				"taplo", -- toml
-				"hls", -- haskell
+				-- "hls", -- haskell
 			},
 		})
 
