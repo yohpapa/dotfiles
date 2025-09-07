@@ -59,26 +59,25 @@ return {
 			end,
 		})
 
-    --[[
-		mason_lsp.setup_handlers({
-			function(server_name)
-				lspconfig[server_name].setup({
-					capabilities = capabilities,
-				})
-			end,
-			["bashls"] = function()
-				lspconfig["bashls"].setup({
-					capabilities = capabilities,
-					filetypes = { "sh", "bash", "zsh" },
-				})
-			end,
-			["marksman"] = function()
-				lspconfig["bashls"].setup({
-					capabilities = capabilities,
-					filetypes = { "markdown", "markdown.mdx", "md" },
-				})
-			end,
+		vim.lsp.config("bashls", {
+			settings = {
+				capabilities = capabilities,
+				filetypes = { "sh", "bash", "zsh" },
+			},
 		})
-    --]]
+
+		vim.lsp.config("marksman", {
+			settings = {
+				capabilities = capabilities,
+				filetypes = { "markdown", "markdown.mdx", "md" },
+			},
+		})
+
+		vim.lsp.config("nil_ls", {
+			settings = {
+				capabilities = capabilities,
+				filetypes = { "nix" },
+			},
+		})
 	end,
 }

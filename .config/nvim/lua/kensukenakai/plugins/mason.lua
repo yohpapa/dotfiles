@@ -1,7 +1,9 @@
 return {
 	"williamboman/mason.nvim",
+	-- { "mason-org/mason.nvim", version = "^1.0.0" },
 	dependencies = {
 		"williamboman/mason-lspconfig.nvim",
+		-- { "mason-org/mason-lspconfig.nvim", version = "^1.0.0" },
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 	},
 
@@ -18,6 +20,7 @@ return {
 				"lua_ls", -- lua
 				"marksman", -- markdown
 				"taplo", -- toml
+				"nil_ls", -- nix
 				-- "hls", -- haskell
 			},
 		})
@@ -27,6 +30,7 @@ return {
 				"prettier",
 				"stylua",
 				"fourmolu",
+				"nixfmt",
 			},
 		})
 	end,
