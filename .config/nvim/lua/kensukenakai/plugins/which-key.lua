@@ -12,7 +12,15 @@ return {
 			function()
 				require("which-key").show({ global = false })
 			end,
-			desc = "Buffer Local Keymaps (which-key)",
+			desc = "keymaps",
 		},
 	},
+
+	config = function()
+		local whichkey = require("which-key")
+		whichkey.add({
+			{ "<leader>s", group = "window" },
+			{ "<leader>t", group = "tab" },
+		})
+	end,
 }

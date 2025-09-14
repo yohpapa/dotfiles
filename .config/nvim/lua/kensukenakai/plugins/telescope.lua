@@ -9,6 +9,7 @@ return {
 	config = function()
 		local telescope = require("telescope")
 		local builtin = require("telescope.builtin")
+		local whichkey = require("which-key")
 
 		telescope.load_extension("fzf")
 		vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
@@ -23,6 +24,10 @@ return {
 				buffers = { hidden = true },
 				help_tags = { hidden = true },
 			},
+		})
+
+		whichkey.add({
+			{ "<leader>f", group = "telescope" },
 		})
 	end,
 }

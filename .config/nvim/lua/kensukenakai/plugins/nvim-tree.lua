@@ -60,5 +60,10 @@ return {
 		-- make the background transparent
 		vim.cmd([[hi NvimTreeNormal guibg=NONE ctermbg=NONE]])
 		vim.cmd([[hi NvimTreeNormalNC guibg=NONE ctermbg=NONE]])
+
+		local whichkey = require("which-key")
+		whichkey.add({
+			{ "<leader>e", group = "files/folders" },
+		})
 	end,
 }

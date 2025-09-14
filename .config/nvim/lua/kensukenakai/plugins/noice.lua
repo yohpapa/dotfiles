@@ -44,5 +44,10 @@ return {
 		vim.keymap.set("n", "<leader>nd", function()
 			require("noice").cmd("dismiss")
 		end, { desc = "Dismiss the notifications" })
+
+		local whichkey = require("which-key")
+		whichkey.add({
+			{ "<leader>n", group = "noice" },
+		})
 	end,
 }
