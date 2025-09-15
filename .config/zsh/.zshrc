@@ -1,3 +1,9 @@
+#            _
+#    _______| |__  _ __ ___
+#   |_  / __| '_ \| '__/ __|
+#  _ / /\__ \ | | | | | (__
+# (_)___|___/_| |_|_|  \___|
+
 # Zinit setup
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
@@ -65,7 +71,7 @@ export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 
 # General environment
 export EDITOR="nvim"
-export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:$HOME/go/bin:$HOME/.local/scripts
 
 # Shell integrations
 # eval "$(/opt/homebrew/bin/brew shellenv)"
