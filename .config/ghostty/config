@@ -6,6 +6,6 @@
 #  |___/                         |___/
 
 font-family = Hack Nerd Font Mono
-font-size = 10
+font-size = 13
 
 theme = catppuccin-mocha
