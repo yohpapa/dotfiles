@@ -7,7 +7,7 @@ __      ____ _ _   _| |__   __ _ _ __     / /  ___| |_ _   _| | ___
                |___/                                   |___/
 */
 
-import "/home/unamomo/.cache/wal/colors-waybar.css";
+@import "/home/unamomo/.cache/wal/colors-waybar.css";
 
 #waybar {
   color: @foreground;
