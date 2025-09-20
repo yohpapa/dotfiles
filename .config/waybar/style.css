@@ -37,6 +37,7 @@ window#waybar.hidden {
   margin: 5px;
   border-radius: 12px;
   border: 1px solid @color15;
+  box-shadow: 0 0 8px gray;
 }
 
 /* Style for the muted state */
@@ -58,6 +59,7 @@ tooltip {
   padding: 10px;
   color: @foreground;
   font-size: 13px;
+  box-shadow: 0 0 8px gray;
 }
 
 #workspaces {
@@ -68,6 +70,7 @@ tooltip {
   font-weight: bold;
   font-style: normal;
   font-size: 16px;
+  box-shadow: 0 0 8px gray;
 }
 
 #workspaces button {
@@ -76,7 +79,7 @@ tooltip {
   border-radius: 15px;
   border: 0px;
   color: @color1;
-  background-color: @color15;
+  background-color: @color11;
   transition: all 0.3s ease-in-out;
 }
 
@@ -85,7 +88,7 @@ tooltip {
   background-color: @background;
   border: 3px solid @foreground;
   border-radius: 15px;
-  min-width: 50px;
+  min-width: 80px;
   transition: all 0.3s ease-in-out;
   font-weight: bold;
   font-size: 18px;
@@ -101,28 +104,6 @@ tooltip {
     background: @color13;
     border-radius: 15px;
 }
-
-/*
-#workspaces {
-  background-color: @background;
-  border-radius: 12px;
-  border: 1px solid @foreground;
-  padding: 0 5px;
-}
-
-#workspaces button {
-  padding: 0 5px;
-  color: @foreground;
-}
-
-#workspaces button.active {
-  background-color: @background;
-}
-
-#workspaces button.occupied {
-  color: @foreground;
-}
-*/
 
 #custom-appmenu,
 #network,
@@ -140,4 +121,5 @@ tooltip {
   border: 1px solid @vibrant-color;
   margin: 5px;
   padding: 0 10px;
+  box-shadow: 0 0 8px gray;
 }
