@@ -21,16 +21,17 @@ return {
 				"marksman", -- markdown
 				"taplo", -- toml
 				"nil_ls", -- nix
+				"cssls", -- css
 				-- "hls", -- haskell
 			},
 		})
 
 		mason_tool_installer.setup({
 			ensure_installed = {
-				"prettier",
-				"stylua",
-				"fourmolu",
-				"nixfmt",
+				"prettier", -- css, md, yaml, toml
+				"stylua", -- lua
+				-- "fourmolu", -- haskell
+				"nixfmt", -- nix
 			},
 		})
 	end,

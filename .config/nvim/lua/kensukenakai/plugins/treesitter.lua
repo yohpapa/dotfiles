@@ -22,6 +22,7 @@ return {
 				"typescript",
 				"tsx",
 				"yaml",
+				"haskell",
 				"html",
 				"css",
 				"prisma",

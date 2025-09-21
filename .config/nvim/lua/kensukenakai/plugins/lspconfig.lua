@@ -84,5 +84,19 @@ return {
 				filetypes = { "nix" },
 			},
 		})
+
+		vim.lsp.config("cssls", {
+			settings = {
+				capabilities = capabilities,
+				filetypes = { "css" },
+			},
+		})
+
+		vim.lsp.config("hls", {
+			settings = {
+				capabilities = capabilities,
+				filetypes = { "hs" },
+			},
+		})
 	end,
 }

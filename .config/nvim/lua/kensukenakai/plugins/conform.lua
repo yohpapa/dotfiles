@@ -7,6 +7,9 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				markdown = { "prettier" },
+				css = { "prettier" },
+				yaml = { "prettier" },
+				toml = { "prettier" },
 			},
 
 			format_on_save = {
