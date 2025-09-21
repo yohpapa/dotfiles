@@ -17,7 +17,8 @@ bindkey '^n' history-search-forward
 
 # History
 export HISTSIZE=5000
-export HISTFILE=$HOME/.cache/zsh/history
+export HIST_DIR=$HOME/.cache/zsh
+export HISTFILE=$HIST_DIR/history
 export SAVEHIST=$HISTSIZE
 export HISTDUP=erase
 setopt appendhistory
@@ -27,6 +28,10 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
+
+if [ ! -d "$HIST_DIR" ]; then
+  mkdir -p "$HIST_DIR"
+fi
 
 # Completion styling
 # Note:
