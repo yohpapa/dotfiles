@@ -10,6 +10,7 @@ return {
 				css = { "prettier" },
 				yaml = { "prettier" },
 				toml = { "prettier" },
+				haskell = { "ormolu", "stylish-haskell" },
 			},
 
 			format_on_save = {

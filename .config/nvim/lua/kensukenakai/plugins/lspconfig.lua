@@ -77,6 +77,7 @@ return {
 				filetypes = { "markdown", "markdown.mdx", "md" },
 			},
 		})
+		vim.lsp.enable("marksman")
 
 		vim.lsp.config("nil_ls", {
 			settings = {
@@ -84,6 +85,7 @@ return {
 				filetypes = { "nix" },
 			},
 		})
+		vim.lsp.enable("nil_ls")
 
 		vim.lsp.config("cssls", {
 			settings = {
@@ -91,12 +93,19 @@ return {
 				filetypes = { "css" },
 			},
 		})
+		vim.lsp.enable("cssls")
 
 		vim.lsp.config("hls", {
+			on_attach = function(client, bufnr)
+				client.server_capabilities.documentFormattingProvider = false
+				client.server_capabilities.documentRangeFormattingProvider = false
+			end,
+
 			settings = {
 				capabilities = capabilities,
-				filetypes = { "hs" },
+				filetypes = { "haskell" },
 			},
 		})
+		vim.lsp.enable("hls")
 	end,
 }
