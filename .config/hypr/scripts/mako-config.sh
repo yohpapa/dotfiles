@@ -10,7 +10,17 @@
 update_mako_config() {
   # Define the paths
   cache_file="${HOME}/.cache/wal/colors.json"
-  output_file="${HOME}/.config/mako/config"
+  output_dir="${HOME}/.config/mako"
+  output_file="${output_dir}/config"
+
+  if [ ! -f "$cache_file" ]; then
+    echo "No $cache_file!"
+    exit -1
+  fi
+
+  if [ ! -d "$output_dir" ]; then
+    mkdir -p $output_dir
+  fi
 
   # Extract colors from the pywal cache file
   background=$(jq -r '.special.background' "$cache_file")
