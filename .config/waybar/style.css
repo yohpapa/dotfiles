@@ -12,8 +12,8 @@ __      ____ _ _   _| |__   __ _ _ __     / /  ___| |_ _   _| | ___
 #waybar {
   color: @foreground;
   background-color: transparent;
-  font-family: "Hack Nerd Font Mono";
-  font-size: 16px;
+  font-family: "Hack Nerd Font Propo";
+  font-size: 14px;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -58,7 +58,6 @@ tooltip {
   border: 1px solid @foreground;
   padding: 10px;
   color: @foreground;
-  font-size: 13px;
   box-shadow: 0 0 8px gray;
 }
 
@@ -69,7 +68,6 @@ tooltip {
   border: 0px;
   font-weight: bold;
   font-style: normal;
-  font-size: 16px;
   box-shadow: 0 0 8px gray;
 }
 
@@ -86,17 +84,11 @@ tooltip {
 #workspaces button.active {
   color: @foreground;
   background-color: @background;
-  border: 3px solid @foreground;
+  border: 1px solid @foreground;
   border-radius: 15px;
   min-width: 80px;
   transition: all 0.3s ease-in-out;
   font-weight: bold;
-  font-size: 18px;
-}
-
-#workspaces button.inactive {
-  background-color: @color5;
-  color: @foreground;
 }
 
 #workspaces button:hover {
@@ -106,8 +98,17 @@ tooltip {
 }
 
 #custom-appmenu,
+#window {
+  color: @foreground;
+  background-color: @background;
+  border-radius: 12px;
+  border: 1px solid @vibrant-color;
+  margin: 5px;
+  padding: 0 10px;
+  box-shadow: 0 0 8px gray;
+}
+
 #network,
-#window,
 #cpu,
 #memory,
 #disk,
@@ -115,6 +116,7 @@ tooltip {
 #custom-exit,
 #tray,
 #clock {
+  font-family: "Hack Nerd Font Mono";
   color: @foreground;
   background-color: @background;
   border-radius: 12px;
