@@ -19,6 +19,10 @@ return {
 		},
 		animate = {},
 		indent = {},
-		scroll = {},
+		scroll = {
+			-- snaks scroll feature causes a performan issue with high repeat rate in hyprland,
+			-- (stuttering upon scrolling up/down), thus disabled.
+			enabled = false,
+		},
 	},
 }

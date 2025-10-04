@@ -113,12 +113,12 @@ __      ____ _ _   _| |__   __ _ _ __     / /  _ __ ___   ___   __| |_   _| | __
     "format-source": "{volume}% ",
     "format-source-muted": "",
     "format-icons": {
-      "default": [" ", " ", " "],
-      "headphone": " ",
+      "default": ["🔈", "🔉", "🔊"],
+      "headphone": "🎧",
       "hands-free": "󱆏 ",
       "headset": " ",
-      "phone": " ",
-      "portable": " ",
+      "phone": "☎",
+      "portable": "🎙️",
       "car": " ",
     },
     "on-click": "pavucontrol"
