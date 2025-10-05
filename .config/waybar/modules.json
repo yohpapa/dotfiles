@@ -61,7 +61,7 @@ __      ____ _ _   _| |__   __ _ _ __     / /  _ __ ___   ___   __| |_   _| | __
 
   // System tray
   "tray": {
-    "icon-size": 22,
+    "icon-size": 20,
     "spacing": 14,
     "reverse-direction": false
   },
