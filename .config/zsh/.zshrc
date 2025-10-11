@@ -47,7 +47,6 @@ zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
 zstyle ':fzf-tab:*' popup-min-size 100 20
 
 # Auto-completion setup
-autoload -Uz compinit && compinit
 _comp_options+=(globdots)  # Include hidden files
 zinit cdreplay -q
 
@@ -59,8 +58,7 @@ alias tree='eza -T'
 alias cat='bat'
 alias c='clear'
 alias vi='nvim'
-# Not ready yet
-# alias top='btop'
+alias top='btop'
 
 # Install plugins
 # Note: fzf-tab needs to be loaded after compinit, but before plugins which
@@ -99,3 +97,13 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+# NOTE: The below is to ensure not to rebuild the completion cache every time the shell
+#       starts, which causes significant performance bottleneck. Specifically, since
+#       the system always calls compinit in /etc/zshrc, we need to "invalidate" compinit
+#       funciton to avoid rebuilding the completion cache. Note that this logic must be
+#       placed at the very end of .zshrc.
+if (( $+functions[compinit] )); then
+  unset -f compinit
+fi
+
