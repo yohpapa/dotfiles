@@ -211,7 +211,7 @@ spawn-at-startup "mako"
 spawn-at-startup "fcitx5 -d"
 spawn-at-startup "wl-paste --type text --watch cliphist store"
 spawn-at-startup "wl-paste --type image --watch cliphist store"
-spawn-at-startup "waybar"
+spawn-at-startup "waybar -c ~/.config/waybar/config-niri.jsonc"
 
 environment {
   DISPLAY ":0";
