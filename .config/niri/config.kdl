@@ -210,6 +210,11 @@ spawn-at-startup "wl-paste --type text --watch cliphist store"
 spawn-at-startup "wl-paste --type image --watch cliphist store"
 spawn-at-startup "waybar"
 
+environment {
+  DISPLAY ":0";
+}
+spawn-at-startup "xwayland-satellite";
+
 // https://github.com/ful1e5
 cursor {
   // xcursor-theme "Bibata-Modern-Ice"
@@ -259,15 +264,12 @@ window-rule {
   // This regular expression is intentionally made as specific as possible,
   // since this is the default config, and we want no false positives.
   // You can get away with just app-id="wezterm" if you want.
-  match app-id=r#"^org\.wezfurlong\.wezterm$"#
-  default-column-width {}
+  match app-id="com.mitchellh.ghostty"
 }
 
-// Open the Firefox picture-in-picture player as floating by default.
 window-rule {
-  // This app-id regular expression will work for both:
-  // - host Firefox (app-id is "firefox")
-  // - Flatpak Firefox (app-id is "org.mozilla.firefox")
+  match app-id=".blueman-manager-wrapped"
+  match app-id="org.pulseaudio.pavucontrol"
   match app-id=r#"firefox$"# title="^Picture-in-Picture$"
   open-floating true
 }
@@ -289,6 +291,19 @@ window-rule {
 /-window-rule {
   geometry-corner-radius 12
   clip-to-geometry true
+}
+
+overview {
+  zoom 0.5
+  backdrop-color "#262626"
+
+  workspace-shadow {
+    // off
+    softness 40
+    spread 10
+    offset x=10 y=10
+    color "#00000050"
+  }
 }
 
 hotkey-overlay {
