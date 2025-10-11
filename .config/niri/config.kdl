@@ -202,7 +202,6 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
-// This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "~/.config/scripts/autostart.sh"
 spawn-at-startup "swayosd-server"
 spawn-at-startup "nm-applet"
@@ -211,7 +210,7 @@ spawn-at-startup "mako"
 spawn-at-startup "fcitx5 -d"
 spawn-at-startup "wl-paste --type text --watch cliphist store"
 spawn-at-startup "wl-paste --type image --watch cliphist store"
-spawn-at-startup "waybar -c ~/.config/waybar/config-niri.jsonc"
+spawn-at-startup "~/.config/scripts/waybar.sh"
 
 environment {
   DISPLAY ":0";

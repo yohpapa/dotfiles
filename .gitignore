@@ -2,3 +2,4 @@
 .config/ghostty/shaders
 .config/tmux/plugins
 .config/zsh/.zcompdump*
+.config/waybar/config.jsonc
