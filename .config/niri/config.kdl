@@ -350,10 +350,8 @@ binds {
 
   Print           hotkey-overlay-title="" { spawn "~/.config/scripts/screenshot.sh"; }
   Mod+Print       hotkey-overlay-title="" { spawn "~/.config/scripts/screenshot.sh" "-s"; }
-  // TODO
-  // SHIFT+Print     hotkey-overlay-title="" { spawn "~/.config/hypr/scripts/screenshot.sh" "-w"; }
-  // Mod+SHIFT+Print hotkey-overlay-title="" { spawn "~/.config/hypr/scripts/screenshot.sh" "-sw"; }
-
+  SHIFT+Print     hotkey-overlay-title="" { spawn "~/.config/scripts/screenshot.sh" "-w"; }
+  Mod+SHIFT+Print hotkey-overlay-title="" { spawn "~/.config/scripts/screenshot.sh" "-sw"; }
 
   // Open/close the Overview: a zoomed-out view of workspaces and windows.
   // You can also move the mouse into the top-left hot corner,

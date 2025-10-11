@@ -7,7 +7,7 @@
 # | .__/ \__, | \_/\_/ \__,_|_|      \__|_| |_|\___|_| |_| |_|\___|     |_|  \__,_|_| |_|\__,_|\___/|_| |_| |_(_)___/_| |_|
 # |_|    |___/
 
-source "${HOME}/.config/hypr/scripts/mako-config.sh"
+source "${HOME}/.config/scripts/mako-config.sh"
 
 walpaper_directory=$HOME/pictures/wallpapers
 wallpaper_path=$(find "$walpaper_directory" -type f -print0 | shuf -z -n 1)

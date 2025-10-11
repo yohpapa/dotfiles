@@ -26,7 +26,6 @@ while getopts "sw" opt; do
 done
 
 compositor=$(~/.config/scripts/check_compositor.sh)
-
 temp_file=$(mktemp --suffix=.png)
 
 target_window_addr=""
@@ -35,12 +34,13 @@ if [ "$capture_active_window" = true ]; then
   if [ "$compositor" = "hyprland" ]; then
     target_window_addr=$(hyprctl activewindow -j | jq -r '.address')
     window_geometry=$(hyprctl clients -j | jq -r --arg addr "$target_window_addr" 'map(select(.address == $addr)) | .[] | "\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])"')
+    grim -g "$window_geometry" - > "$temp_file"
   elif [ "$compositor" = "niri" ]; then
-    # TODO
-    target_window_addr=
-    window_geometry=
+    selected_window_id=$(niri msg --json pick-window | jq -r '.id')
+    niri msg action screenshot-window --id="$selected_window_id" --write-to-disk=false
+    sleep 0.1
+    wl-paste -t image/png > "$temp_file"
   fi
-  grim -g "$window_geometry" - > "$temp_file"
 else
   grim -g "$(slurp -d)" -> "$temp_file"
 fi
