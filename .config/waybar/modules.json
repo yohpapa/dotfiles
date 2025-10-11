@@ -7,7 +7,7 @@ __      ____ _ _   _| |__   __ _ _ __     / /  _ __ ___   ___   __| |_   _| | __
                |___/
 */
 {
-  // Workspaces
+  // Hyprland workspaces
   "hyprland/workspaces" : {
     "on-scroll-up": "hyprctl dispatch workspace r-1",
     "on-scroll-down": "hyprctl dispatch workspace r+1",        
@@ -22,33 +22,50 @@ __      ____ _ _   _| |__   __ _ _ __     / /  _ __ ___   ___   __| |_   _| | __
     },
     "persistent-workspaces": {
       "*": 3
+    }
+  },
+
+  // Niri workspaces
+  "niri/workspaces" : {
+    "on-click": "activate",
+    "format": "{index}",
+    "persistent-workspaces": {
+      "*": 3
     }       
   },
 
-  // Hyprland Window
+  // Hyprland window
   "hyprland/window": {
     "format": "{}",
-    "rewrite": {
-      "class<firefox>": " $1",
-      "class<com.mitchellh.ghostty>": "󰊠 $1",
+     "rewrite": {
+      "(.*) — Mozilla Firefox": " $1",
+      "^(Ghostty)$": "󰊠  $1"
     },
   },
 
-  // Rofi Application Launcher
+  "niri/window": {
+    "format": "{}",
+    "rewrite": {
+      "(.*) — Mozilla Firefox": " $1",
+      "^(Ghostty)$": "󰊠  $1"
+    },
+  },
+
+  // Rofi application launcher
   "custom/appmenu": {
     "format": "󰀻 Apps",
     "on-click": "rofi -show drun -show-icons",
     "tooltip-format": "Open the application launcher"
   },
 
-  // Power Menu
+  // Power menu
   "custom/exit": {
     "format": "",
     "on-click": "wlogout",
     "tooltip-format": "Power Menu"
   },
 
-  // keyboard state
+  // Keyboard state
   "keyboard-state": {
     "numlock": true,
     "capslock": true,
