@@ -3,7 +3,7 @@
 input {
   keyboard {
     xkb {}
-    repeat-delay 300
+    repeat-delay 450
     repeat-rate 60
   }
   touchpad {}
