@@ -46,3 +46,7 @@
 ;;   :config
 ;;   ;; Set the desired flavor *before* loading the theme.
 ;;   (load-theme 'zenburn t))
+
+;; common settings
+(setq auto-save-default nil)
+(set-frame-font "Hack Nerd Font 8" nil t)

@@ -1,7 +1,3 @@
-\.config/yazi
-\.config/xremap
-\.config/systemd
-\.config/wezterm
-\.config/neowofetch
 ^/README.*
 \.git
+\.gitignore
