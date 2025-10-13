@@ -1,5 +1,5 @@
-.config/hypr/animations
-.config/ghostty/shaders
-.config/tmux/plugins
-.config/zsh/.zcompdump*
-.config/waybar/config.jsonc
+hypr/.config/hypr/animations
+ghostty/.config/ghostty/shaders
+tmux/.config/tmux/plugins
+zsh/.config/zsh/.zcompdump*
+waybar/.config/waybar/config.jsonc
