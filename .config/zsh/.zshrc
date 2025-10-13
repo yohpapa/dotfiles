@@ -59,6 +59,7 @@ alias cat='bat'
 alias c='clear'
 alias vi='nvim'
 alias top='btop'
+alias spf='superfile'
 
 # Install plugins
 # Note: fzf-tab needs to be loaded after compinit, but before plugins which
