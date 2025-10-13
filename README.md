@@ -25,7 +25,7 @@ The module is a name of the directory which you want to stow in `$HOME/.config`.
 
 ## Post-installations (if needed)
 
-### tmux module (required)
+### tmux module
 
 Clone the below projects.
 
@@ -36,7 +36,7 @@ $ git clone https://github.com/tmux-plugins/tpm $HOME/.config/tmux/plugins/tpm
 
 Don't forget to install tmux plugins with `Ctrl-U`+I.
 
-### ghostty module (optional)
+### ghostty module
 
 Download shaders from the below and put them in `$HOME/.config/ghostty/shaders`.
 
