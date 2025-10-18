@@ -49,4 +49,5 @@
 
 ;; common settings
 (setq auto-save-default nil)
-(set-frame-font "Hack Nerd Font 8" nil t)
+(add-to-list 'default-frame-alist
+	     '(font . "FiraCode Nerd Font-7"))

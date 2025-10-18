@@ -7,8 +7,9 @@
 
 window-decoration = none
 
-font-family = Hack Nerd Font Mono
-font-size = 13
+font-family = FiraCode Nerd Font Mono
+font-size = 12
+font-feature = "liga, dlig, calt"
 
 # theme = Catppuccin Frappe
 # theme = Catppuccin Latte

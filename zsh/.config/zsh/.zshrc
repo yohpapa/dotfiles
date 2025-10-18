@@ -66,7 +66,7 @@ alias spf='superfile'
 # wil wrap widgets, such as zsh-autosuggestions or fast-syntax-highlighting
 # -- https://github.com/Aloxaf/fzf-tab
 zinit light Aloxaf/fzf-tab
-zinit light zsh-users/zsh-syntax-highlighting
+zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 

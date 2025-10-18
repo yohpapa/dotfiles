@@ -9,7 +9,7 @@ if wezterm.target_triple == "aarch64-apple-darwin" then
 	config.font_size = 16
 	config.window_decorations = "RESIZE"
 else
-	config.font = wezterm.font("Hack Nerd Font")
+	config.font = wezterm.font("FiraCode Nerd Font Mono")
 	config.font_size = 12
 	config.window_decorations = "NONE"
 end
