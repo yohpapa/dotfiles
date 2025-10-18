@@ -1,10 +1,15 @@
-;;; Startup
-;;; PACKAGE LIST
+;;  _       _ _         _
+;; (_)_ __ (_) |_   ___| |
+;; | | '_ \| | __| / _ \ |
+;; | | | | | | |_ |  __/ |
+;; |_|_| |_|_|\__(_)___|_|
+
+;;; package repositories
 (setq package-archives 
       '(("melpa" . "https://melpa.org/packages/")
         ("elpa" . "https://elpa.gnu.org/packages/")))
 
-;;; BOOTSTRAP USE-PACKAGE
+;;; bootstrap for package.el
 (package-initialize)
 (setq use-package-always-ensure t)
 (unless (package-installed-p 'use-package)
@@ -12,11 +17,10 @@
   (package-install 'use-package))
 (eval-when-compile (require 'use-package))
 
-;;; UNDO
-;; Vim style undo not needed for emacs 28
+;; vim style undo not needed for emacs 28
 (use-package undo-fu)
 
-;;; Vim Bindings
+;; evil-mode
 (use-package evil
   :demand t
   :bind (("<escape>" . keyboard-escape-quit))
@@ -29,25 +33,28 @@
   :config
   (evil-mode 1))
 
-;;; Vim Bindings Everywhere else
+;; evil mode everywhere
 (use-package evil-collection
   :after evil
   :config
   (setq evil-want-integration t)
   (evil-collection-init))
 
+;; disable some UI components
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+
+;; theme
 (use-package catppuccin-theme
   :config
   ;; Set the desired flavor *before* loading the theme.
   (setq catppuccin-flavor 'mocha)
   (load-theme 'catppuccin t))
 
-;; (use-package zenburn-theme
-;;   :config
-;;   ;; Set the desired flavor *before* loading the theme.
-;;   (load-theme 'zenburn t))
+;; font
+(add-to-list 'default-frame-alist
+	     '(font . "FiraCode Nerd Font Mono-7"))
 
 ;; common settings
 (setq auto-save-default nil)
-(add-to-list 'default-frame-alist
-	     '(font . "FiraCode Nerd Font-7"))
