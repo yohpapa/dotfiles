@@ -1,26 +1,7 @@
-
 ;; (_)_ __ (_) |_   ___| |
 ;; | | '_ \| | __| / _ \ |
 ;; | | | | | | |_ |  __/ |
 ;; |_|_| |_|_|\__(_)___|_|
-
-;; bootstrap for straight-use-package.el
-;; https://github.com/radian-software/straight.el
-(defvar bootstrap-version)
-(let ((bootstrap-file
-       (expand-file-name
-        "straight/repos/straight.el/bootstrap.el"
-        (or (bound-and-true-p straight-base-dir)
-            user-emacs-directory)))
-      (bootstrap-version 7))
-  (unless (file-exists-p bootstrap-file)
-    (with-current-buffer
-        (url-retrieve-synchronously
-         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
-         'silent 'inhibit-cookies)
-      (goto-char (point-max))
-      (eval-print-last-sexp)))
-  (load bootstrap-file nil 'nomessage))
 
 ;;; package repositories
 (setq package-archives 
@@ -79,6 +60,9 @@
 
 ;; common settings
 (setq auto-save-default nil)
+(global-display-line-numbers-mode 1)
+(setq display-line-numbers-type 'relative)
+(global-hl-line-mode)
 
 ;; vertico
 (use-package vertico
@@ -91,6 +75,7 @@
 	      ("C-h" . backward-kill-word))
   :custom
   (vertico-cycle t)
+  (setq vertico-count 20)
   :init
   (vertico-mode))
 
@@ -98,5 +83,28 @@
   :init
   (savehist-mode))
 
-(straight-use-package '(marginalia :host github :repo "minad/marginalia" :branch "main"))
-(marginalia-mode)
+(use-package marginalia
+  :ensure t
+  :init
+  (marginalia-mode))
+
+;; volatile-highlights
+(use-package volatile-highlights
+  :ensure t
+  :config
+  (volatile-highlights-mode 1))
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(catppuccin-theme evil-collection marginalia undo-fu vertico
+		      volatile-highlights zenburn-theme)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

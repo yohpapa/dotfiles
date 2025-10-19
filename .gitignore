@@ -3,3 +3,4 @@ ghostty/.config/ghostty/shaders
 tmux/.config/tmux/plugins
 zsh/.config/zsh/.zcompdump*
 waybar/.config/waybar/config.jsonc
+emacs/.emacs.d/*.el\~
