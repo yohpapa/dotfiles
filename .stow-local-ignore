@@ -1,3 +1,4 @@
 ^/README.*
 \.git
 \.gitignore
+emacs/.emacs.d/*.el\~
