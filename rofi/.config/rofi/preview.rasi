@@ -1,0 +1,67 @@
+/**
+                        _                             _
+   _ __  _ __ _____   _(_) _____      ___ __ __ _ ___(_)
+  | '_ \| '__/ _ \ \ / / |/ _ \ \ /\ / / '__/ _` / __| |
+  | |_) | | |  __/\ V /| |  __/\ V  V /| | | (_| \__ \ |
+  | .__/|_|  \___| \_/ |_|\___| \_/\_(_)_|  \__,_|___/_|
+  |_|
+ */
+
+
+@import "/home/unamomo/.cache/wal/colors-rofi-dark.rasi"
+
+configuration {
+  show-icons: true;
+  modes: "window,drun,run,ssh,filebrowser,recursivebrowser";
+  font: "FiraCode Nerd Font Propo 13";
+  timeout {
+    action: "kb-cancel";
+    delay:  0;
+  }
+}
+
+@import "/home/unamomo/.cache/wal/colors-rofi-dark.rasi" 
+
+window {
+  width: 1200px; 
+  height: 700px;
+  children: [ inputbar, listview ];
+}
+
+listview {
+  columns: 4;
+  lines: 3;
+  layout: vertical;
+  flow: horizontal;
+  spacing: 10px;
+  fixed-height: true;
+  fixed-columns: true;
+}
+
+element {
+  orientation: vertical;
+  padding: 5px;
+  vertical-align: 0.5;
+  horizontal-align: 0.5;
+}
+
+element-icon {
+  size: 256px;
+  horizontal-align: 0.5;
+}
+
+element-text {
+  expand: true;
+  present: true;
+  width: 100%;
+  padding: 0px;
+  margin: 5px 0px 0px 0px;
+  text-color: @foreground;
+  horizontal-align: 0.5;
+}
+
+element selected {
+  background-color: @selected-active-background;
+  border-radius: 5px;
+}
+

@@ -17,8 +17,5 @@ if [[ -z "$wallpaper_path" ]]; then
   exit 1
 fi
 
-wal -i "$wallpaper_path" -t -s
-swww img "$wallpaper_path" --transition-type outer --transition-fps 30 --transition-duration 2
-update_mako_config
+$HOME/.config/scripts/set-pywal-theme.sh $wallpaper_path
 
-notify-send -i "$wallpaper_path" "The wallpaper has changed!"
