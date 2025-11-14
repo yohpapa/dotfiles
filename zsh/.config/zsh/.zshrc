@@ -99,6 +99,9 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+# nix configurations
+export NIX_SHELL_DIR=$HOME/flake/shells
+
 # NOTE: The below is to ensure not to rebuild the completion cache every time the shell
 #       starts, which causes significant performance bottleneck. Specifically, since
 #       the system always calls compinit in /etc/zshrc, we need to "invalidate" compinit
