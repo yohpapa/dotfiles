@@ -107,5 +107,13 @@ return {
 			},
 		})
 		vim.lsp.enable("hls")
+
+		vim.lsp.config("clangd", {
+			settings = {
+				capabilities = capabilities,
+				filetypes = { "c", "cpp", "h", "hpp" },
+			},
+		})
+		vim.lsp.enable("clangd")
 	end,
 }

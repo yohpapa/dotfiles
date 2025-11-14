@@ -21,6 +21,7 @@ return {
 		whichkey.add({
 			{ "<leader>s", group = "window" },
 			{ "<leader>t", group = "tab" },
+			{ "<leader>l", group = "git" },
 		})
 	end,
 }
