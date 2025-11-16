@@ -23,3 +23,10 @@ keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" 
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" })
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
+
+-- terminal mode
+keymap.set("t", "<leader>sh", "<C-\\><C-n><C-w>h", { desc = "Go to left window (terminal)" })
+keymap.set("t", "<leader>sj", "<C-\\><C-n><C-w>j", { desc = "Go to lower window (terminal)" })
+keymap.set("t", "<leader>sk", "<C-\\><C-n><C-w>k", { desc = "Go to upper window (terminal)" })
+keymap.set("t", "<leader>sl", "<C-\\><C-n><C-w>l", { desc = "Go to right window (terminal)" })
+keymap.set("t", "<leader>sx", "<C-\\><C-n>", { desc = "Exit terminal mode" })

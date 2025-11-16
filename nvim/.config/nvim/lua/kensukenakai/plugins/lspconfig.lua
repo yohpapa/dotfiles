@@ -103,7 +103,7 @@ return {
 
 			settings = {
 				capabilities = capabilities,
-				filetypes = { "haskell" },
+				filetypes = { "hs", "haskell" },
 			},
 		})
 		vim.lsp.enable("hls")

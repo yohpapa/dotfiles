@@ -19,7 +19,7 @@ return {
 	config = function()
 		local whichkey = require("which-key")
 		whichkey.add({
-			{ "<leader>s", group = "window" },
+			{ "<leader>s", group = "window/terminal" },
 			{ "<leader>t", group = "tab" },
 			{ "<leader>l", group = "git" },
 		})
