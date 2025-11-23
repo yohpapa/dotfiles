@@ -39,6 +39,7 @@ return {
 				"vimdoc",
 				"c",
 				"toml",
+				"zig",
 			},
 			incremental_selection = {
 				enable = true,

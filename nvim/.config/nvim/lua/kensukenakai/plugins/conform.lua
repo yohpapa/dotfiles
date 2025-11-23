@@ -11,6 +11,7 @@ return {
 				yaml = { "prettier" },
 				toml = { "prettier" },
 				haskell = { "ormolu", "stylish-haskell" },
+				zig = { "zig fmt" },
 			},
 
 			format_on_save = {

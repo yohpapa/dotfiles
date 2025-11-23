@@ -115,5 +115,13 @@ return {
 			},
 		})
 		vim.lsp.enable("clangd")
+
+		vim.lsp.config("zls", {
+			settings = {
+				capabilities = capabilities,
+				filetypes = { "zig" },
+			},
+		})
+		vim.lsp.enable("zls")
 	end,
 }
