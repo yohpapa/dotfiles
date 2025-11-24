@@ -62,16 +62,50 @@ $ git clone https://github.com/BennyOe/tokyo-night.yazi.git @HOME/.config/yazi/f
 
 ### systemd module
 
-Copy the udev rule in the repository to /etc/udev/rule.d.
-
-```
-$ cp .config/systemd/user/80-xremap.rules /etc/udev/rule.d/
-```
-
-then start a new system service with the following.
-
-```
+```sh
+$ cd $HOME/dotfiles
+$ stow systemd
 $ systemctl --user daemon-reload
-$ systemctl --user start xremap
-$ systemctl --user enable xremap
+$ systemctl --user enable set-dark-theme.timer set-light-theme.timer
+$ systemctl --user start set-dark-theme.timer set-light-theme.timer
+```
+
+### PWA for favorite web services
+
+1. Install [PWAsForFirefox extension](https://addons.mozilla.org/en-US/firefox/addon/pwas-for-firefox/) on Firefox.
+2. Create a symlink.
+
+```sh
+$ find /nix/store -name firefoxpwa.json
+...
+/nix/store/[HASH]-firefoxpwa-[VERSION]/lib/mozilla/native-messaging-hosts/firefoxpwa.json
+^C
+$ ln -sf /nix/store/[HASH]-firefoxpwa-[VERSION]/lib/mozilla/native-messaging-hosts/firefoxpwa.json ~/.mozilla/native-messaging-hosts/firefoxpwa.json
+```
+
+3. Open a favorite page on Firefox and confirm the app-id for its app-id.
+
+```sh
+$ niri msg windows
+...
+Window ID 12:
+  Title: "Google Search"
+  App ID: "[HASH]"
+  Is floating: no
+  PID: 63286
+  Workspace ID: 1
+...
+```
+
+4. Finally update `$HOME/.config/niri/config.kdl` with the above hash.
+
+```kdl
+# ...
+window-rule {
+  # ...
+  match app-id="^[HASH]$"
+  # ...
+  open-floating true
+}
+# ...
 ```
