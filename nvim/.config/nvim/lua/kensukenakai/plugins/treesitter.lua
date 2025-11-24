@@ -40,6 +40,7 @@ return {
 				"c",
 				"toml",
 				"zig",
+				"kdl",
 			},
 			incremental_selection = {
 				enable = true,
