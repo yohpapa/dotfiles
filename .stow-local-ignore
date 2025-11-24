@@ -2,3 +2,5 @@
 \.git
 \.gitignore
 emacs/.emacs.d/*.el\~
+systemd/.config/systemd/user/timers.target.wants
+systemd/.config/systemd/user/timers.target.wants/*

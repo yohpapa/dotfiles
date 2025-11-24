@@ -4,3 +4,4 @@ tmux/.config/tmux/plugins
 zsh/.config/zsh/.zcompdump*
 waybar/.config/waybar/config.jsonc
 emacs/.emacs.d/*.el\~
+systemd/.config/systemd/user/timers.target.wants
