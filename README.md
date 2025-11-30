@@ -62,12 +62,14 @@ $ git clone https://github.com/BennyOe/tokyo-night.yazi.git @HOME/.config/yazi/f
 
 ### systemd module
 
+**IMPORTANT**: Update an absolute path to each `*.service` file.
+
 ```sh
 $ cd $HOME/dotfiles
 $ stow systemd
 $ systemctl --user daemon-reload
-$ systemctl --user enable set-dark-theme.timer set-light-theme.timer
-$ systemctl --user start set-dark-theme.timer set-light-theme.timer
+$ systemctl --user enable set-dark-theme.timer set-light-theme.timer apply-theme-on-login.service
+$ systemctl --user start set-dark-theme.timer set-light-theme.timer apply-theme-on-login.service
 ```
 
 ### PWA for favorite web services
