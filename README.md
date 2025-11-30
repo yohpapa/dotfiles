@@ -62,7 +62,7 @@ $ git clone https://github.com/BennyOe/tokyo-night.yazi.git @HOME/.config/yazi/f
 
 ### systemd module
 
-**IMPORTANT**: Update an absolute path to each `*.service` file.
+**IMPORTANT**: Update an absolute path in each `*.service` file.
 
 ```sh
 $ cd $HOME/dotfiles
