@@ -7,7 +7,7 @@
 #   \_/\_/ \__,_|\__, |_.__/ \__,_|_|(_)___/_| |_|
 #                |___/
 
-compositor=$(~/.config/scripts/check_compositor.sh)
+compositor=$(~/.config/scripts/check-compositor.sh)
 config_dir="$HOME/.config/waybar"
 source_config=""
 

@@ -25,7 +25,7 @@ while getopts "sw" opt; do
   esac
 done
 
-compositor=$(~/.config/scripts/check_compositor.sh)
+compositor=$(~/.config/scripts/check-compositor.sh)
 temp_file=$(mktemp --suffix=.png)
 
 target_window_addr=""

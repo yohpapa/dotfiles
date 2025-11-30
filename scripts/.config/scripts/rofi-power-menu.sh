@@ -7,7 +7,7 @@
 # |_|  \___/|_| |_|     | .__/ \___/ \_/\_/ \___|_|       |_| |_| |_|\___|_| |_|\__,_(_)___/_| |_|
 #                       |_|
 
-compositor=$(~/.config/scripts/check_compositor.sh)
+compositor=$(~/.config/scripts/check-compositor.sh)
 choosen=$(printf "🔐 Lock\n🔄 Reboot\n🔌 Shutdown\n🚪 Log Out" | rofi -dmenu -i -lines 4 -no-fixed-num-lines -theme-str 'window {width: 10%;}') 
 
 case "$choosen" in
