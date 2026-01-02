@@ -12,6 +12,8 @@ return {
 				toml = { "prettier" },
 				haskell = { "ormolu", "stylish-haskell" },
 				zig = { "zig fmt" },
+				cmake = { "cmake_format" },
+				cpp = { "clang-format" },
 			},
 
 			format_on_save = {

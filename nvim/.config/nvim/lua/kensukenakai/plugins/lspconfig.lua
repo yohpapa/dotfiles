@@ -123,5 +123,12 @@ return {
 			},
 		})
 		vim.lsp.enable("zls")
+
+		vim.lsp.config("neocmakelsp", {
+			cmd = { "neocmakelsp", "--stdio" },
+			filetypes = { "cmake" },
+			root_markers = { "CMakeLists.txt", ".git" },
+		})
+		vim.lsp.enable("neocmakelsp")
 	end,
 }
