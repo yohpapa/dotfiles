@@ -1,0 +1,9 @@
+#                               _ _               _ _
+#  _   _ ___  ___ _ __       __| (_)_ __ ___   __| (_)_ __ ___
+# | | | / __|/ _ \ '__|____ / _` | | '__/ __| / _` | | '__/ __|
+# | |_| \__ \  __/ | |_____| (_| | | |  \__ \| (_| | | |  \__ \
+#  \__,_|___/\___|_|        \__,_|_|_|  |___(_)__,_|_|_|  |___/
+
+# This file defines the custom locations for XDG user directories.
+# Firefox and other apps use this to find the preferred download folder.
+XDG_DOWNLOAD_DIR="$HOME/downloads"
