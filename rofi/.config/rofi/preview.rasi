@@ -8,7 +8,7 @@
  */
 
 
-@import "/home/unamomo/.cache/wal/colors-rofi-dark.rasi"
+@import "/home/kensuke/.cache/wal/colors-rofi-dark.rasi"
 
 configuration {
   show-icons: true;
@@ -20,7 +20,7 @@ configuration {
   }
 }
 
-@import "/home/unamomo/.cache/wal/colors-rofi-dark.rasi" 
+@import "/home/kensuke/.cache/wal/colors-rofi-dark.rasi" 
 
 window {
   width: 1200px; 

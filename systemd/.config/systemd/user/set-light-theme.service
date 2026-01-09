@@ -9,5 +9,5 @@ Description=Set Niri Theme to Light
 
 [Service]
 Type=oneshot
-ExecStart=/home/unamomo/.config/scripts/light-theme.sh
+ExecStart=/home/kensuke/.config/scripts/light-theme.sh
 

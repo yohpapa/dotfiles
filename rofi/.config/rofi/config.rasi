@@ -175,8 +175,7 @@ configuration {
   }
 }
 
-@import "/home/unamomo/.cache/wal/colors-rofi-dark.rasi" 
-/* @import "/home/unamomo/.cache/wal/colors-rofi-light.rasi" */
+@import "/home/kensuke/.cache/wal/colors-rofi-dark.rasi" 
 
 window {
   width: 35%;

@@ -23,7 +23,7 @@
 
   // Load Modules
   "include": [
-      "/home/unamomo/.config/waybar/modules.json"
+      "/home/kensuke/.config/waybar/modules.json"
   ],
 
   // Modules Left

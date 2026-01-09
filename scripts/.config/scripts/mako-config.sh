@@ -75,3 +75,4 @@ EOF
   makoctl reload
 }
 
+update_mako_config

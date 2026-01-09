@@ -9,5 +9,5 @@ Description=Set Niri Theme to Dark
 
 [Service]
 Type=oneshot
-ExecStart=/home/unamomo/.config/scripts/dark-theme.sh
+ExecStart=/home/kensuke/.config/scripts/dark-theme.sh
 

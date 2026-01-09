@@ -10,7 +10,7 @@ Description=Apply Theme on User Login
 
 [Service]
 Type=oneshot
-ExecStart=/home/unamomo/.config/scripts/check-theme.sh
+ExecStart=/home/kensuke/.config/scripts/check-theme.sh
 
 [Install]
 WantedBy=graphical-session.target
