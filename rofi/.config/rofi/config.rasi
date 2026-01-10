@@ -8,7 +8,7 @@
 
 configuration {
   modes: "window,drun,run,ssh,filebrowser,recursivebrowser";
-  font: "FiraCode Nerd Font Propo 13";
+  font: "CaskaydiaCove Nerd Font Propo 13";
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
@@ -185,10 +185,10 @@ window {
 }
 
 prompt, entry, case-indicator {
-  font: "FiraCode Nerd Font Prop 13";
+  font: "CaskaydiaCove Nerd Font Prop 13";
 }
 
 element-text {
-  font: "FiraCode Nerd Font Prop 13";
+  font: "CaskaydiaCove Nerd Font Prop 13";
   padding: 5px;
 }

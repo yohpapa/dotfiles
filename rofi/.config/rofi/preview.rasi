@@ -13,7 +13,7 @@
 configuration {
   show-icons: true;
   modes: "window,drun,run,ssh,filebrowser,recursivebrowser";
-  font: "FiraCode Nerd Font Propo 13";
+  font: "CaskaydiaCove Nerd Font Propo 13";
   timeout {
     action: "kb-cancel";
     delay:  0;

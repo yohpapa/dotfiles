@@ -12,7 +12,7 @@ __      ____ _ _   _| |__   __ _ _ __     / /  ___| |_ _   _| | ___
 #waybar {
   color: @foreground;
   background-color: transparent;
-  font-family: "FiraCode Nerd Font Propo";
+  font-family: "CaskaydiaCove Nerd Font Propo";
   font-size: 14px;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -116,7 +116,7 @@ tooltip {
 #custom-exit,
 #tray,
 #clock {
-  font-family: "FiraCode Nerd Font Mono";
+  font-family: "CaskaydiaCove Nerd Font Mono";
   color: @foreground;
   background-color: @background;
   border-radius: 12px;
