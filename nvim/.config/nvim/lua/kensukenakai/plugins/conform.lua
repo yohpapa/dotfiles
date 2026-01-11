@@ -14,6 +14,7 @@ return {
 				zig = { "zig fmt" },
 				cmake = { "cmake_format" },
 				cpp = { "clang-format" },
+				go = { "gofmt" },
 			},
 
 			format_on_save = {

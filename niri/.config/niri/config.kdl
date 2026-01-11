@@ -276,6 +276,7 @@ window-rule {
   match app-id=".blueman-manager-wrapped"
   match app-id="org.pulseaudio.pavucontrol"
   match app-id="^FFPWA-01KEK88180TWGNAYZGMQG80BRM$"
+  match app-id="^FFPWA-01KENXBR3EV2GENFZHHEHMRNHJ$"
   match app-id=r#"firefox$"# title="^Picture-in-Picture$"
   open-floating true
 }

@@ -130,5 +130,13 @@ return {
 			root_markers = { "CMakeLists.txt", ".git" },
 		})
 		vim.lsp.enable("neocmakelsp")
+
+		vim.lsp.config("gopls", {
+			settings = {
+				capabilities = capabilities,
+				filetypes = { "go" },
+			},
+		})
+		vim.lsp.enable("gopls")
 	end,
 }
