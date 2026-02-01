@@ -8,7 +8,7 @@
 #                       |_|
 
 compositor=$(~/.config/scripts/check-compositor.sh)
-choosen=$(printf "🔐 Lock\n🔄 Reboot\n🔌 Shutdown\n🚪 Log Out" | rofi -dmenu -i -lines 4 -no-fixed-num-lines -theme-str 'window {width: 10%;}') 
+choosen=$(printf "🔐 Lock\n🔄 Reboot\n🔌 Shutdown\n🚪 Log Out" | rofi -dmenu -i -lines 4 -no-fixed-num-lines -theme-str 'window {width: 20%;}') 
 
 case "$choosen" in
 	"🔐 Lock") hyprlock ;;

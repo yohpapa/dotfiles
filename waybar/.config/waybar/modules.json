@@ -149,5 +149,18 @@ __      ____ _ _   _| |__   __ _ _ __     / /  _ __ ___   ___   __| |_   _| | __
     "interval": 30,
     "on-click": "blueman-manager",
     "format-no-controller": ""
+  },
+
+  "battery": {
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip-format": "{timeTo}\nPower: {power}W"
   }
 }

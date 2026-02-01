@@ -115,7 +115,8 @@ tooltip {
 #keyboard-state,
 #custom-exit,
 #tray,
-#clock {
+#clock,
+#battery {
   font-family: "CaskaydiaCove Nerd Font Mono";
   color: @foreground;
   background-color: @background;
