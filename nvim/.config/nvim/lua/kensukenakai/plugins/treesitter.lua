@@ -42,6 +42,7 @@ return {
 				"zig",
 				"kdl",
 				"go",
+				"gomod",
 			},
 			incremental_selection = {
 				enable = true,

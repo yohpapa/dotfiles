@@ -337,16 +337,17 @@ binds {
   XF86MonBrightnessUp   hotkey-overlay-title="Increase brightness (+10%)" { spawn "swayosd-client" "--brightness" "+10" ;}
   XF86MonBrightnessDown hotkey-overlay-title="Decrease brightness (-10%)" { spawn "swayosd-client" "--brightness" "-10" ;}
   XF86AudioLowerVolume  hotkey-overlay-title="Decrease volume (-10%)"     { spawn "swayosd-client" "--output-volume" "-10" ;}
-  XF86AudioraiseVolume  hotkey-overlay-title="Increase volume (+10%)"     { spawn "swayosd-client" "--output-volume" "10" ;}
+  XF86AudioRaiseVolume  hotkey-overlay-title="Increase volume (+10%)"     { spawn "swayosd-client" "--output-volume" "+10" ;}
   XF86AudioMute         hotkey-overlay-title="Toggle volume mute"         { spawn "swayosd-client" "--output-volume" "mute-toggle" ;}
   XF86AudioMicMute      hotkey-overlay-title="Toggle volume mute"         { spawn "swayosd-client" "--input-volume" "mute-toggle" ;}
 
   Mod+F6  hotkey-overlay-title="Increase brightness (+10%)" { spawn "swayosd-client" "--brightness" "+10" ;}
   Mod+F5  hotkey-overlay-title="Decrease brightness (-10%)" { spawn "swayosd-client" "--brightness" "-10" ;}
   Mod+F2  hotkey-overlay-title="Decrease volume (-10%)"     { spawn "swayosd-client" "--output-volume" "-10" ;}
-  Mod+F3  hotkey-overlay-title="Increase volume (+10%)"     { spawn "swayosd-client" "--output-volume" "10" ;}
+  Mod+F3  hotkey-overlay-title="Increase volume (+10%)"     { spawn "swayosd-client" "--output-volume" "+10" ;}
   Mod+F1  hotkey-overlay-title="Toggle volume mute"         { spawn "swayosd-client" "--output-volume" "mute-toggle" ;}
-  Mod+F4  hotkey-overlay-title="Toggle volume mute"         { spawn "swayosd-client" "--input-volume" "mute-toggle" ;}
+  Mod+F4  hotkey-overlay-title="Toggle microphone mute"     { spawn "swayosd-client" "--input-volume" "mute-toggle" ;}
+
 
   Print           hotkey-overlay-title="Take a region screenshot"             { spawn "~/.config/scripts/screenshot.sh"; }
   Mod+Print       hotkey-overlay-title="Take a region screenshot and edit it" { spawn "~/.config/scripts/screenshot.sh" "-s"; }

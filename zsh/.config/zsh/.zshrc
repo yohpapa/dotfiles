@@ -100,7 +100,7 @@ function y() {
 }
 
 # nix configurations
-export NIX_SHELL_DIR=$HOME/flake/shells
+export NIX_SHELL_DIR=$HOME/nixos/shells
 
 # NOTE: The below is to ensure not to rebuild the completion cache every time the shell
 #       starts, which causes significant performance bottleneck. Specifically, since
