@@ -198,6 +198,10 @@ spawn-at-startup "nm-applet"
 spawn-at-startup "blueman-applet"
 spawn-at-startup "mako"
 spawn-at-startup "tailscale-systray"
+spawn-at-startup "swayidle" "-w" "timeout" "300" "brightnessctl set 10%" "resume" "brightnessctl set 100%" \
+                                 "timeout" "600" "/home/kensuke/.config/scripts/screenlock.sh" \
+                                 "timeout" "900" "systemctl suspend-then-hibernate" \
+                                 "before-sleep" "/home/kensuke/.config/scripts/screenlock.sh"
 
 environment {
   DISPLAY ":0";
@@ -359,6 +363,8 @@ binds {
 
   Mod+E hotkey-overlay-title="Kill Emacs server" { spawn "~/.config/scripts/kill-emacs.sh"; }
 
+  Mod+Shift+L hotkey-overlay-title="Lock screen" { spawn "~/.config/scripts/screenlock.sh"; }
+
   // Open/close the Overview: a zoomed-out view of workspaces and windows.
   // You can also move the mouse into the top-left hot corner,
   // or do a four-finger swipe up on a touchpad.
@@ -403,7 +409,7 @@ binds {
   Mod+Shift+H     { focus-monitor-left; }
   Mod+Shift+J     { focus-monitor-down; }
   Mod+Shift+K     { focus-monitor-up; }
-  Mod+Shift+L     { focus-monitor-right; }
+  // Mod+Shift+L     { focus-monitor-right; }
 
   Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
   Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
