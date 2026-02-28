@@ -5,26 +5,31 @@
 # \__ \ (__| | |  __/  __/ | | | | (_) | (__|   < _\__ \ | | |
 # |___/\___|_|  \___|\___|_| |_|_|\___/ \___|_|\_(_)___/_| |_|
 
+ # Path for the temporary blurred screenshot
+
 # Path for the temporary blurred screenshot
-IMAGE=/tmp/screen_lock.png
+SOURCE_IMG="$(cat ~/.cache/wal/wal)"
+TARGET_IMG="/tmp/target.png"
 
-# 1. Take a screenshot
-grim $IMAGE
 
-# 2. Blur the image using ImageMagick
-# 0x8 is the blur intensity; increase 8 for more blur
-magick $IMAGE -blur 0x8 $IMAGE
+# Pull colors from pywal (using shell expansion)
+# Note: This assumes pywal is active
+COLOR1=$(sed -n '2p' ~/.cache/wal/colors) # A primary accent
 
-# 3. Lock the screen using your existing swaylock
-swaylock -i $IMAGE \
+# Blur the image using ImageMagick
+# # 0x8 is the blur intensity; increase 8 for more blur
+magick $SOURCE_IMG -blur 0x8 $TARGET_IMG
+
+# Lock the screen using your existing swaylock
+swaylock -i $TARGET_IMG \
   --indicator-radius 100 \
   --indicator-thickness 10 \
-  --ring-color 8833ff \
+  --ring-color $COLOR1 \
   --key-hl-color ffffff \
   --inside-color 00000088 \
   --line-color 00000000 \
   --separator-color 00000000 \
   -efF
 
-# 4. Optional: remove the image after unlocking
-rm $IMAGE
+rm $TARGET_IMG
+
