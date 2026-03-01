@@ -267,6 +267,7 @@ window-rule {
   match app-id="org.pulseaudio.pavucontrol"
   match app-id="^FFPWA-01KFK1KNGR087TK18YJT6M48D4$"
   match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+  match app-id="^FFPWA-01KJKZ1V1547QR33VZ86CM5BBJ$"
   open-floating true
 }
 
