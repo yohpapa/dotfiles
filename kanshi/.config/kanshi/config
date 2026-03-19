@@ -1,0 +1,17 @@
+#  _                   _     _    __               __ _
+# | | ____ _ _ __  ___| |__ (_)  / /__ ___  _ __  / _(_) __ _
+# | |/ / _` | '_ \/ __| '_ \| | / / __/ _ \| '_ \| |_| |/ _` |
+# |   < (_| | | | \__ \ | | | |/ / (_| (_) | | | |  _| | (_| |
+# |_|\_\__,_|_| |_|___/_| |_|_/_/ \___\___/|_| |_|_| |_|\__, |
+#                                                       |___/
+
+# Eizo connected (both lid open and closed — kanshi can't tell the difference)
+# We will rely on the acpid service.
+profile docked {
+    output "Eizo Nanao Corporation EV3240X 24091073" enable mode 3840x2160@60 position 0,0 scale 1.25
+    output eDP-1 enable mode 1920x1200@60 position 3072,0 scale 1.1
+}
+
+profile undocked {
+    output eDP-1 enable mode 1920x1200@60 position 0,0 scale 1.1
+}
