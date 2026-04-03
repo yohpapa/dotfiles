@@ -12,8 +12,7 @@ LIGHT_SCRIPT="$HOME/.config/scripts/light-theme.sh"
 HOUR=$(date +%H)
 
 if [ "$HOUR" -ge 6 ] && [ "$HOUR" -lt 19 ]; then
-  exec "$LIGHT_SCRIPT"
+  "$LIGHT_SCRIPT"
 else
-  exec "$DARK_SCRIPT"
+  "$DARK_SCRIPT"
 fi
-
