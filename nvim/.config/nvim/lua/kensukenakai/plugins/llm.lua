@@ -22,7 +22,9 @@ return {
 		backend = "ollama",
 		-- model = "qwen2.5-coder:7b",
 		-- model = "deepseek-coder:1.3b",
-		model = "starcoder2:3b",
+		-- model = "starcoder2:3b",
+		-- model = "starcoder2:15b",
+		model = "starcoder2:7b",
 		url = "http://localhost:11434",
 
 		fim = {
