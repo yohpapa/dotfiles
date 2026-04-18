@@ -15,6 +15,9 @@ return {
 				cmake = { "cmake_format" },
 				cpp = { "clang-format" },
 				go = { "gofmt" },
+				nix = { "nixfmt-rfc-style" },
+				sh = { "shfmt" },
+				zsh = { "shfmt" },
 			},
 
 			format_on_save = {

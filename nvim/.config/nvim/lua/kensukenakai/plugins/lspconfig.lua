@@ -9,7 +9,6 @@ return {
 
 	config = function()
 		local lspconfig = require("lspconfig")
-		local mason_lsp = require("mason-lspconfig")
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 		local keymap = vim.keymap
 		local capabilities = cmp_nvim_lsp.default_capabilities()
@@ -65,32 +64,33 @@ return {
 		})
 
 		vim.lsp.config("bashls", {
+			filetypes = { "sh", "bash", "zsh" },
 			settings = {
 				capabilities = capabilities,
-				filetypes = { "sh", "bash", "zsh" },
 			},
 		})
+		vim.lsp.enable("bashls")
 
 		vim.lsp.config("marksman", {
+			filetypes = { "markdown", "markdown.mdx", "md" },
 			settings = {
 				capabilities = capabilities,
-				filetypes = { "markdown", "markdown.mdx", "md" },
 			},
 		})
 		vim.lsp.enable("marksman")
 
 		vim.lsp.config("nil_ls", {
+			filetypes = { "nix" },
 			settings = {
 				capabilities = capabilities,
-				filetypes = { "nix" },
 			},
 		})
 		vim.lsp.enable("nil_ls")
 
 		vim.lsp.config("cssls", {
+			filetypes = { "css" },
 			settings = {
 				capabilities = capabilities,
-				filetypes = { "css" },
 			},
 		})
 		vim.lsp.enable("cssls")
@@ -101,25 +101,25 @@ return {
 				client.server_capabilities.documentRangeFormattingProvider = false
 			end,
 
+			filetypes = { "hs", "haskell" },
 			settings = {
 				capabilities = capabilities,
-				filetypes = { "hs", "haskell" },
 			},
 		})
 		vim.lsp.enable("hls")
 
 		vim.lsp.config("clangd", {
+			filetypes = { "c", "cpp", "h", "hpp" },
 			settings = {
 				capabilities = capabilities,
-				filetypes = { "c", "cpp", "h", "hpp" },
 			},
 		})
 		vim.lsp.enable("clangd")
 
 		vim.lsp.config("zls", {
+			filetypes = { "zig" },
 			settings = {
 				capabilities = capabilities,
-				filetypes = { "zig" },
 			},
 		})
 		vim.lsp.enable("zls")
@@ -132,11 +132,43 @@ return {
 		vim.lsp.enable("neocmakelsp")
 
 		vim.lsp.config("gopls", {
+			filetypes = { "go" },
 			settings = {
 				capabilities = capabilities,
-				filetypes = { "go" },
 			},
 		})
 		vim.lsp.enable("gopls")
+
+		vim.lsp.config("lua_ls", {
+			filetypes = { "lua" },
+			settings = {
+				capabilities = capabilities,
+			},
+		})
+		vim.lsp.enable("lua_ls")
+
+		vim.lsp.config("jsonls", {
+			filetypes = { "json", "jsonc" },
+			settings = {
+				capabilities = capabilities,
+			},
+		})
+		vim.lsp.enable("jsonls")
+
+		vim.lsp.config("yamlls", {
+			filetypes = { "yaml", "yml" },
+			settings = {
+				capabilities = capabilities,
+			},
+		})
+		vim.lsp.enable("yamlls")
+
+		vim.lsp.config("taplo", {
+			filetypes = { "toml" },
+			settings = {
+				capabilities = capabilities,
+			},
+		})
+		vim.lsp.enable("taplo")
 	end,
 }

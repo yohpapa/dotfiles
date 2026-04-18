@@ -87,16 +87,7 @@ eval "$(fzf --zsh)"
 [ -e $ZDOTDIR/office.zsh ] && source $ZDOTDIR/office.zsh 
 [ -e $ZDOTDIR/home.zsh ] && source $ZDOTDIR/home.zsh 
 [ -f $HOME/.ghcup/env ] && . $HOME/.ghcup/env # ghcup-env
-
-# yazi configuration
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
+[ -e $ZDOTDIR/secret.zsh ] && source $ZDOTDIR/secret.zsh
 
 # nix configurations
 export NIX_SHELL_DIR=$HOME/nixos/shells
