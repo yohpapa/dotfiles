@@ -5,12 +5,11 @@
 # \__ \ (__| | |  __/  __/ | | | | (_) | (__|   < _\__ \ | | |
 # |___/\___|_|  \___|\___|_| |_|_|\___/ \___|_|\_(_)___/_| |_|
 
- # Path for the temporary blurred screenshot
+# Path for the temporary blurred screenshot
 
 # Path for the temporary blurred screenshot
 SOURCE_IMG="$(cat ~/.cache/wal/wal)"
 TARGET_IMG="/tmp/target.png"
-
 
 # Pull colors from pywal (using shell expansion)
 # Note: This assumes pywal is active
@@ -29,7 +28,9 @@ swaylock -i $TARGET_IMG \
   --inside-color 00000088 \
   --line-color 00000000 \
   --separator-color 00000000 \
-  -efF
+  -eF
+
+# Update the theme when the screen is unlocked
+/home/kensuke/.config/scripts/check-theme.sh
 
 rm $TARGET_IMG
-

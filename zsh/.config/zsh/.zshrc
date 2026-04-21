@@ -88,6 +88,7 @@ eval "$(fzf --zsh)"
 [ -e $ZDOTDIR/home.zsh ] && source $ZDOTDIR/home.zsh 
 [ -f $HOME/.ghcup/env ] && . $HOME/.ghcup/env # ghcup-env
 [ -e $ZDOTDIR/secret.zsh ] && source $ZDOTDIR/secret.zsh
+[ -e $ZDOTDIR/opencode.zsh ] && source $ZDOTDIR/opencode.zsh
 
 # nix configurations
 export NIX_SHELL_DIR=$HOME/nixos/shells
