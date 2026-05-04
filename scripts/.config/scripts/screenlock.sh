@@ -6,8 +6,6 @@
 # |___/\___|_|  \___|\___|_| |_|_|\___/ \___|_|\_(_)___/_| |_|
 
 # Path for the temporary blurred screenshot
-
-# Path for the temporary blurred screenshot
 SOURCE_IMG="$(cat ~/.cache/wal/wal)"
 TARGET_IMG="/tmp/target.png"
 
@@ -20,7 +18,7 @@ COLOR1=$(sed -n '2p' ~/.cache/wal/colors) # A primary accent
 magick $SOURCE_IMG -blur 0x8 $TARGET_IMG
 
 # Lock the screen using your existing swaylock
-swaylock -i $TARGET_IMG \
+swaylock -f -i $TARGET_IMG \
   --indicator-radius 100 \
   --indicator-thickness 10 \
   --ring-color $COLOR1 \

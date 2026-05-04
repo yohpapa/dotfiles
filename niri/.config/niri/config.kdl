@@ -198,10 +198,12 @@ spawn-at-startup "nm-applet"
 spawn-at-startup "blueman-applet"
 spawn-at-startup "mako"
 spawn-at-startup "tailscale-systray"
-spawn-at-startup "swayidle" "-w" "timeout" "300" "brightnessctl set 10%" "resume" "brightnessctl set 100%" \
+spawn-at-startup "swayidle" "-w" "timeout" "300" "brightnessctl set 10%" \
+                                 "resume" "brightnessctl set 100%" \
                                  "timeout" "600" "/home/kensuke/.config/scripts/screenlock.sh" \
                                  "timeout" "900" "systemctl suspend-then-hibernate" \
-                                 "before-sleep" "/home/kensuke/.config/scripts/screenlock.sh"
+                                 "before-sleep" "/home/kensuke/.config/scripts/screenlock.sh" \
+                                 "after-resume" "brightnessctl set 100%"
 
 environment {
   DISPLAY ":0";
