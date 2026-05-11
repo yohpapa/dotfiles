@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
 
 #  _ _       _     _        _   _                               _
 # | (_) __ _| |__ | |_     | |_| |__   ___ _ __ ___   ___   ___| |__
@@ -11,4 +11,3 @@ DCONF_PATH=$(command -v dconf)
 if [ -n "$DCONF_PATH" ]; then
   "$DCONF_PATH" write /org/gnome/desktop/interface/color-scheme \'"prefer-light"\'
 fi
-
